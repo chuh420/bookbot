@@ -9,6 +9,13 @@ Telegram-бот записи клиентов для небольшого биз
 
 Python, [aiogram](https://github.com/aiogram/aiogram) 3 и SQLite. демо с выдуманным барбершопом: [@chuh_barberdemo_bot](https://t.me/chuh_barberdemo_bot), отвечает, пока включён мой ноутбук.
 
+| клиент | владелец |
+| --- | --- |
+| ![меню](docs/screenshots/menu.png) | ![расписание](docs/screenshots/schedule.png) |
+| ![календарь](docs/screenshots/calendar.png) | ![статистика](docs/screenshots/stats.png) |
+
+остальные скриншоты лежат в [docs/screenshots](docs/screenshots).
+
 ## что умеет клиент
 
 - записаться в одном сообщении, которое меняется на каждом шаге: услуга, мастер или «Любой свободный», календарь на 14 дней вперёд, свободное время, подтверждение

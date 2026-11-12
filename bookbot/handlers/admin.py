@@ -160,7 +160,8 @@ async def on_booking(cb: CallbackQuery, bot: Bot, db: Database, biz: Business, l
         rows = []
         if row["status"] == "active":
             rows.append([(t(lang, "adm_btn_cancel"), f"ax:{row['id']}"), (t(lang, "adm_btn_noshow"), f"an:{row['id']}")])
-        await show(cb, text, kb(rows) if rows else None)
+        if isinstance(cb.message, Message):
+            await cb.message.answer(text, reply_markup=kb(rows) if rows else None)
         return
     if row["status"] != "active":
         await cb.answer(t(lang, "not_found"), show_alert=True)
