@@ -1,0 +1,78 @@
+name = "Barber Demo"
+phone = "+7 700 000 00 00"
+timezone = "Asia/Almaty"
+currency = "₸"
+
+[address]
+ru = "Алматы, пр. Абая 10, 2 этаж"
+kk = "Алматы, Абай даңғылы 10, 2-қабат"
+en = "10 Abay Ave, 2nd floor, Almaty"
+
+[about]
+ru = "Работаем каждый день. Оплата наличными или Kaspi."
+kk = "Күн сайын жұмыс істейміз. Төлем қолма-қол немесе Kaspi арқылы."
+en = "Open every day. Cash or Kaspi."
+
+[rules]
+slot_minutes = 30
+min_lead_minutes = 60
+horizon_days = 14
+cancel_minutes = 120
+max_active = 2
+remind_hours = [24, 2]
+
+[services.haircut]
+name = { ru = "Стрижка", kk = "Шаш қию", en = "Haircut" }
+minutes = 45
+price = 5000
+
+[services.beard]
+name = { ru = "Борода", kk = "Сақал күтімі", en = "Beard trim" }
+minutes = 30
+price = 3000
+
+[services.combo]
+name = { ru = "Стрижка и борода", kk = "Шаш пен сақал", en = "Haircut and beard" }
+minutes = 75
+price = 7000
+
+[services.kids]
+name = { ru = "Детская стрижка", kk = "Балалар шаш қиюы", en = "Kids haircut" }
+minutes = 30
+price = 3500
+
+[staff.arman]
+name = { ru = "Арман", kk = "Арман", en = "Arman" }
+services = ["haircut", "beard", "combo", "kids"]
+lunch = "14:00-15:00"
+
+[staff.arman.hours]
+mon = "10:00-20:00"
+tue = "10:00-20:00"
+wed = "10:00-20:00"
+thu = "10:00-20:00"
+fri = "10:00-20:00"
+sat = "11:00-18:00"
+
+[staff.daniyar]
+name = { ru = "Данияр", kk = "Данияр", en = "Daniyar" }
+services = ["haircut", "beard", "combo"]
+lunch = "13:00-14:00"
+
+[staff.daniyar.hours]
+tue = "11:00-21:00"
+wed = "11:00-21:00"
+thu = "11:00-21:00"
+fri = "11:00-21:00"
+sat = "11:00-21:00"
+sun = "11:00-18:00"
+
+[staff.aliya]
+name = { ru = "Алия", kk = "Әлия", en = "Aliya" }
+services = ["haircut", "kids"]
+
+[staff.aliya.hours]
+mon = "10:00-16:00"
+wed = "10:00-16:00"
+fri = "10:00-16:00"
+sun = "11:00-18:00"

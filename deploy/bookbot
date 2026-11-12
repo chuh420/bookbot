@@ -1,0 +1,9 @@
+#!/bin/sh
+case "$1" in
+  on) systemctl --user start bookbot && echo "bookbot on" ;;
+  off) systemctl --user stop bookbot && echo "bookbot off" ;;
+  restart) systemctl --user restart bookbot && echo "bookbot restarted" ;;
+  status) systemctl --user is-active bookbot ;;
+  logs) journalctl --user -u bookbot -n 50 -f ;;
+  *) echo "usage: bookbot on|off|restart|status|logs"; exit 1 ;;
+esac

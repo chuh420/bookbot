@@ -1,0 +1,10 @@
+[Unit]
+Description=bookbot telegram booking bot
+After=network-online.target
+
+[Service]
+WorkingDirectory=%h/dev/bookbot
+ExecStart=%h/dev/bookbot/.venv/bin/python -m bookbot
+Restart=on-failure
+RestartSec=5
+RestartPreventExitStatus=2
